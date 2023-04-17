@@ -1,0 +1,27 @@
+.App {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -195px;
+    transform: translateY(-50%);
+    width: 390px;
+    border-radius: 10px;
+    background: #2C2C2C;
+    text-align: center;
+    box-shadow: 1px 1px 2px 2px #ccc;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

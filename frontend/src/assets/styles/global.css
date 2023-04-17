@@ -1,0 +1,35 @@
+
+.body {
+    height:100vh;
+    max-height:50vh;
+    min-height:25vh;
+    overflow-y: auto;
+}
+
+.history {
+    text-align: left;
+    margin-bottom:8px;
+}
+
+.history.header {
+    font-weight:bold;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+
+}
+
+.history.session {
+    font-size:77%;
+}
+
+.history_query{
+    cursor:pointer; 
+    padding-left: 0 !important;
+}
+
+.trashit {
+    text-align:center;
+    padding-left:0 !important;
+    cursor:pointer;
+}

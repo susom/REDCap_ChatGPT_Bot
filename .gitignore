@@ -1,0 +1,27 @@
+.DS_STORE
+frontend_vue/
+faux_web/
+
+# Ignore backend and frontend node_modules directories
+backend/node_modules/
+frontend/node_modules/
+
+# Ignore backend and frontend build artifacts
+backend/build/
+frontend/build/
+
+# Ignore Docker build artifacts
+**/Dockerfile.*
+**/*.dockerignore
+
+# Backend Things
+backend/venv/
+backend/logs/
+backend/__pycache__/
+backend/secrets/
+backend/app.yaml
+
+#Frontend Things
+frontend/app.yaml
+frontend/package-lock.json
+frontend/.env

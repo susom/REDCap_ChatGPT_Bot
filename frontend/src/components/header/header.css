@@ -1,0 +1,23 @@
+.header{
+    text-align: left;
+}
+
+.header h1 {
+    background:url("../../assets/images/redcap_logo.png") 0 50% no-repeat;
+    background-size: 30px;
+    font-size: 122%;
+    margin: 15px 0;
+    padding-left: 40px;
+    height: 30px;
+    line-height: 160%;
+    color: #fff;
+}
+
+.header .archive {
+    float:right;
+    margin-left:5px;
+}
+
+.header .chat {
+    float:right;
+}
