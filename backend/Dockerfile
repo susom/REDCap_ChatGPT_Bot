@@ -10,6 +10,13 @@ COPY requirements.txt ./
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+# INSTALL VIM
+RUN apt-get update && apt-get install -y vim
+
+# Copy aliases
+COPY .bash_aliases /root/
+RUN echo "if [ -f /root/.bash_aliases ]; then . /root/.bash_aliases; fi" >> /root/.bashrc
+
 # Download NLTK stopwords
 RUN python -c "import nltk; nltk.download('stopwords')"
 RUN python -c "import nltk; nltk.download('punkt')"
@@ -21,6 +28,7 @@ COPY . .
 # Make port 80 available to the world outside this container
 EXPOSE 5000
 
-CMD ["gunicorn", "-b", ":5000", "app:app"]
+# Set the command to run when the container starts
+CMD ["python", "app.py"]
 
 
