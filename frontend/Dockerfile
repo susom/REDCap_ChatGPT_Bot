@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # INSTALL VIM
-RUN apt-get update && apt-get install -y vim
+RUN apk add --no-cache vim
 
 # Copy aliases
 COPY .bash_aliases /root/
@@ -26,10 +26,14 @@ RUN npm run build
 # Install serve globally
 RUN npm install -g serve
 
-# Expose the port the app runs on
-EXPOSE 3000
+# Set a default environment variable for the port
+ENV PORT=8080
+
+# Expose the port specified by the environment variable
+EXPOSE $PORT
 
 # Set the command to start the app
-CMD ["serve", "-s", "build"]
+CMD ["npm", "start"]
+# CMD ["serve", "-s", "build"]
 
 

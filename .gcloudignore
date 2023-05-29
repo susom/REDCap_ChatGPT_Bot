@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+
+# Node.js
+node_modules/
+
+# Logs
+*.log
+
+# Local env
+.env
+
+# OS files
+.DS_Store
+
+# Git
+.git
+.gitignore
+
+#backend
+secrets/
+logs/
+venv/
+
+#frontend

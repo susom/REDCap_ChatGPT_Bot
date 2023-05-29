@@ -6,11 +6,18 @@ import nltk
 import openai
 import difflib
 import requests
+import time
+import types
+import pprint
+import math
+import pytesseract
+from PIL import Image
 from bs4 import BeautifulSoup
 from fuzzywuzzy import fuzz
+from datetime import datetime, timezone
 
 import logging
-import logging_setup
+# from . import logging_setup
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -21,8 +28,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # Set your API key
 openai.api_key = os.environ.get("OPENAI_API_KEY")
-
-from firestore_utils import get_firestore_client
+from google.cloud import firestore
+from .firestore_utils import get_firestore_client
 db = get_firestore_client()
 
 
